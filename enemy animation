@@ -1,0 +1,258 @@
+[gd_scene load_steps=19 format=3 uid="uid://bvivp8rwgf2x1"]
+
+[ext_resource type="Texture2D" uid="uid://bd7mq0hwydhqa" path="res://new folder/enemy red sprite.png" id="1_g3ta5"]
+[ext_resource type="Texture2D" uid="uid://dbinwj6puggq3" path="res://new folder/enemy red sprite idle.png" id="2_m3uhq"]
+[ext_resource type="Texture2D" uid="uid://dpfvjdypfxr4p" path="res://new folder/enemy blue sprite.png" id="3_wb7wd"]
+[ext_resource type="Texture2D" uid="uid://bb63bmf5uvbx8" path="res://new folder/enemy blue sprite idle.png" id="4_sm53b"]
+[ext_resource type="Texture2D" uid="uid://chsrjl07vujy5" path="res://new folder/enemy yellow sprite.png" id="5_pw152"]
+[ext_resource type="Texture2D" uid="uid://ccn0v8bhm2qx6" path="res://new folder/enemy yellow sprite idle.png" id="6_ug3qh"]
+
+[sub_resource type="Animation" id="Animation_aclp0"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_20ah5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("red enemy idle:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_fkkap"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("red enemy idle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pqmxq"]
+_data = {
+"RESET": SubResource("Animation_20ah5"),
+"idle": SubResource("Animation_fkkap"),
+"walk": SubResource("Animation_aclp0")
+}
+
+[sub_resource type="Animation" id="Animation_d603k"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_w6hxw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("blue enemy idle:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0fih6"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("blue enemy idle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1jiye"]
+_data = {
+"RESET": SubResource("Animation_w6hxw"),
+"idle": SubResource("Animation_0fih6"),
+"walk": SubResource("Animation_d603k")
+}
+
+[sub_resource type="Animation" id="Animation_t00lu"]
+resource_name = "walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_3hssv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("yellow enemy idle:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_2u86r"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("yellow enemy idle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hj2ka"]
+_data = {
+"RESET": SubResource("Animation_3hssv"),
+"idle": SubResource("Animation_2u86r"),
+"walk": SubResource("Animation_t00lu")
+}
+
+[node name="red enemy" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(-7, 13)
+texture = ExtResource("1_g3ta5")
+hframes = 8
+
+[node name="red enemy idle" type="Sprite2D" parent="."]
+position = Vector2(48, 0)
+texture = ExtResource("2_m3uhq")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pqmxq")
+}
+
+[node name="blue enemy" type="Sprite2D" parent="."]
+position = Vector2(0, -26)
+texture = ExtResource("3_wb7wd")
+hframes = 8
+
+[node name="blue enemy idle" type="Sprite2D" parent="blue enemy"]
+position = Vector2(47, 0)
+texture = ExtResource("4_sm53b")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="blue enemy"]
+libraries = {
+"": SubResource("AnimationLibrary_1jiye")
+}
+
+[node name="yellow enemy" type="Sprite2D" parent="."]
+position = Vector2(0, -54)
+texture = ExtResource("5_pw152")
+hframes = 8
+
+[node name="yellow enemy idle" type="Sprite2D" parent="yellow enemy"]
+position = Vector2(47, 0)
+texture = ExtResource("6_ug3qh")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="yellow enemy"]
+libraries = {
+"": SubResource("AnimationLibrary_hj2ka")
+}
