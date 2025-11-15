@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://br2r4jhivpgt7"]
+
+[ext_resource type="Texture2D" uid="uid://c6atv6sqnurpq" path="res://MYSTERY BOX 1.png" id="1_7fyl6"]
+[ext_resource type="Texture2D" uid="uid://b5x343mhr8fdd" path="res://MYSTERY BOX 2.png" id="2_1ymyg"]
+[ext_resource type="Texture2D" uid="uid://kpk0jl600cod" path="res://MYSTERY BOX 3.png" id="3_b64mq"]
+[ext_resource type="Texture2D" uid="uid://cieslrxq56wv4" path="res://MYSTERY BOX 4.png" id="4_ls5lv"]
+[ext_resource type="Texture2D" uid="uid://bengidw57vo60" path="res://MYSTERY BOX 5.png" id="5_61fwp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6kdup"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7fyl6")
+}, {
+"duration": 0.5,
+"texture": ExtResource("2_1ymyg")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_b64mq")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_ls5lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_61fwp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6kdup")
+frame_progress = 0.448476
