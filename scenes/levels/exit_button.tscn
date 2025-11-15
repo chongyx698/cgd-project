@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c9r3x7k2m8qpn"]
+
+[ext_resource type="Script" path="res://scripts/exit_button.gd" id="1_j5q6z"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(50, 50)
+
+[node name="ExitButton" type="Area2D"]
+collision_layer = 16
+collision_mask = 1
+script = ExtResource("1_j5q6z")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+color = Color(1, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 15.0
+offset_bottom = 13.0
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
